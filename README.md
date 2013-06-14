@@ -15,5 +15,10 @@ The code is designed to be run on Sina AppEngine (SAE) platform.
 * The running application on SAE: http://99haizi.sinapp.com/ (doesn't work anymore due to lack of budget)
 * The weibo (sina microblog) of the event: http://weibo.com/jiejiuqier
 
+## Known Issues
+
+* no oauth support: since weibo forbids the use of basic auth, the codes doesn't work with weibo apis. it's needed to upgrade to support oauth.
+* no SAE budget: since SAE stops to offer the free budget to use the platform, fix is needed, e.g. upload the id card for getting the certification and soliciting free resources.
+
 ## License
 The original author, me, Evan Liu (hmisty), would like to publish the codes and documents to the public domain for the great good.
