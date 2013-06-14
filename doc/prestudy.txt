@@ -1,0 +1,33 @@
+sina weibo api
+
+* 如何查找地理位置 location/addr2xy
+根据地点查询地理坐标
+http://open.t.sina.com.cn/wiki/index.php/Location/addr2xy
+GET
+无需登录
+
+* 如何获取微博
+由于无法匿名获取 @随手拍照解救乞讨儿童 的微博内容
+只能先申请一个新微博账号( qingyan123@gmail.com a7... )，然后只关注这个 @随手拍照解救乞讨儿童
+定时刷新取它的微博（所幸weibo还支持basic auth）
+提取其中的照片和相关信息，保存在数据库里
+
+* 如何根据微博id获取其转发的原始微博？
+不必了。原来里面就有了。。。。
+在retweeted_status下面，
+	id即原微博id，
+	created_at即原微博发表时间，
+	original_pic即图片url，
+	text即微博内容（从中抽取地址）
+	geo即地理位置（一般没有）
+	user下面的screen_name是举报者的名字，id是其id
+
+* db design
+weibo1 （如何扩展？多个微博运营账号，没关系，都关注，然后插入本表即可）
+| weibo_id (PK) | editor_id | orig_weibo_id (UK) | reporter_id | reporter_name | report_time | photo_url | detail | geo | address | longitude | latitude |
+| 该条微博ID | 运营编辑账号ID | 原始微博ID | 报告者账号ID | 报告者名字 | 时间 | 图片URL | 描述（即微博内容）| 微博geo字段 | 地址描述（抽取得到） | 经度 | 纬度 |
+
+(1 for app version 1)
+
+经纬度使用新浪接口对抽取的地点查询得到
+

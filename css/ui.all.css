@@ -1,0 +1,5 @@
+/*slider*/
+.ui-slider { background:#ffffff  0 0 repeat-x;border:1px solid #aaaaaa;height:8px;position:relative;overflow:visible;margin:5px 0; }
+.ui-slider-handle { position:absolute;top:-3px;width:13px;height:13px;background:#e6e6e6 url(../images/damframework/theme/e6e6e6_40x100_textures_02_glass_75.png) 0 50% repeat-x;border:1px solid #d3d3d3; }
+.ui-slider-handle:hover, .ui-slider-handle-active { background:#dadada  0 50% repeat-x;border:1px solid #999999;}
+.ui-corner-all { -moz-border-radius:4px;-webkit-border-radius:4px; }

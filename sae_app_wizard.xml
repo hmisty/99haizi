@@ -1,0 +1,10 @@
+<appwizard><introduction><name></name><author>99haizi</author><icon></icon><homepage></homepage><description><![CDATA[@随手拍照解救乞讨儿童 聚合工具，进行地理标注并供方便检索只用]]></description></introduction><platform><services><service></service><service>Mysql</service></services><appconfig><tpl><![CDATA[
+name: <<appname>>
+version: <<version>>
+cron:
+        - description: fetch weibo and save to mysql
+                url: cron/fetchsave.php
+                schedule: every 1 min
+                timezone: Beijing
+
+]]></tpl></appconfig></platform><code><initScript>index.php</initScript></code></appwizard>
