@@ -12,7 +12,7 @@ The code is designed to be run on Sina AppEngine (SAE) platform.
 
 ## Links For Information
 
-* The running application on SAE: http://99haizi.sinapp.com/ (doesn't work anymore due to lack of budget)
+* The running application on SAE: http://99haizi.sinaapp.com/ (doesn't work anymore due to lack of budget)
 * The weibo (sina microblog) of the event: http://weibo.com/jiejiuqier
 
 ## Known Issues
